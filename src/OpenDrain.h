@@ -1,6 +1,18 @@
 #ifndef OPEN_DRAIN_H
 #define OPEN_DRAIN_H
+
+#ifdef PIO_A_TEENSY32
 #include "resource/ODRegister32.h"
+#endif
+
+#ifdef PIO_A_TEENSY35
+#include "resource/ODRegister35.h"
+#endif
+
+#ifdef PIO_A_TEENSY36
+#include "resource/ODRegister36.h"
+#endif
+
 namespace OpenDrain{
 
     template<class REST>
